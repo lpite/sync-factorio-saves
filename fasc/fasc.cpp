@@ -49,7 +49,7 @@ int countLines(std::string str) {
 }
 
 void pushToGit(CONFIG& config) {
-    system(config.gitPull.c_str());
+    
     system(config.gitAdd.c_str());
     system(config.gitCommit.c_str());
     system(config.gitPush.c_str());
@@ -67,7 +67,7 @@ void main() {
     config.gitAdd = "cd " + config.userFolder + " && git add .";
     config.gitCommit = "cd " + config.userFolder + " && git commit -m \"changed\"";
     config.gitPush = "cd " + config.userFolder + " && git push";
-
+    system(config.gitPull.c_str());
     std::string prev = "";
 
     while (true) {
