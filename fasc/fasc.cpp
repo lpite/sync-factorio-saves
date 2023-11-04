@@ -64,7 +64,7 @@ void main() {
     std::cout << "saves folder is = " << config.userFolder << '\n';
 
     // added
-    config.gitPull = "cd " + config.userFolder + "&& git pull origin main";
+    config.gitPull = "cd " + config.userFolder + " && git pull origin main";
 
     config.gitAdd = "cd " + config.userFolder + " && git add .";
     config.gitCommit = "cd " + config.userFolder + " && git commit -m \"changed\"";
